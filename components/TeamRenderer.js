@@ -37,13 +37,7 @@ const TeamRenderer = ({team}) => {
         const res = await fetch(`http://tempo-exercises.herokuapp.com/rest/v1/users/${team.teamLead}`);
         const data = await res.json();
       
-        //setUserDetail({data});
-
-        setUserDetail(prevState => {
-            return { ...data }
-          });
-
-        console.log(userDetail)
+        setUserDetail(data);
     }
 
     useEffect(()=>{

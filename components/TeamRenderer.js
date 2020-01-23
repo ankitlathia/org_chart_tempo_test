@@ -14,8 +14,27 @@ const CustomLI = styled.li`
   }
 
   .teamContainer {
+    background: #e4e2e2;
+    border-radius: 5px;
+    box-shadow: 5px 4px 9px 0px #ccc;
+     
+      .header {
+        background: #553285;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        font-size: .8em;
+        border-radius: 5px;
+
+        h2 {
+            margin: 0;
+        }
+      }
+
       .leadSection {
           display: table;
+          padding: 10px;
+          margin: auto;
 
           * {
             display: table-cell;

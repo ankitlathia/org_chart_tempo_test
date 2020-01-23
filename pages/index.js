@@ -10,6 +10,7 @@ const TeamWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     list-style-type: none;
+    grid-gap: 30px;
   }
 `;
 

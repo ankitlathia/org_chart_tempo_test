@@ -1,59 +1,20 @@
 import Link from 'next/link';
+import styled from "styled-components";
 
-const links = [
-  { href: 'https://github.com/themodernjavascript/create-next-app-cli', label: 'Github' }
-].map(link => {
-  link.key = `nav-link-${link.href}-${link.label}`
-  return link
-});
+const NavWrapper = styled.nav`
+  background: #000;
+  text-align: center;
+  overflow: hidden;
+
+  h1 {
+    color:#fff;
+  }
+`;
 
 const Nav = () => (
-  <nav>
-    <ul>
-      <li>
-        <Link prefetch href="/">
-          <a>Home</a>
-        </Link>
-      </li>
-      <ul>
-        {links.map(
-          ({ key, href, label }) => (
-            <li key={key}>
-              <Link href={href}>
-                <a>{label}</a>
-              </Link>
-            </li>
-          )
-        )}
-      </ul>
-    </ul>
-
-    <style jsx>{`
-      :global(body) {
-        margin: 0;
-        font-family: -apple-system,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif;
-      }
-      nav {
-        text-align: center;
-      }
-      ul {
-        display: flex;
-        justify-content: space-between;
-      }
-      nav > ul {
-        padding: 4px 16px;
-      }
-      li {
-        display: flex;
-        padding: 6px 8px;
-      }
-      a {
-        color: #067df7;
-        text-decoration: none;
-        font-size: 13px;
-      }
-    `}</style>
-  </nav>
+  <NavWrapper>
+    <h1>Organization Chart</h1>
+  </NavWrapper>
 );
 
 export default Nav;
